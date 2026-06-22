@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>500彩票网官方 · 稳定信息入口与使用引导</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+        }
+
+        body {
+            background: #f0f5f9;
+            padding: 20px 16px 60px;
+            color: #1e2a3a;
+            line-height: 1.6;
+        }
+
+        .page-wrap {
+            max-width: 1080px;
+            margin: 0 auto;
+        }
+
+        /* hero 主视觉 */
+        .hero {
+            background: linear-gradient(145deg, #1b4b5a 0%, #2c6f7a 100%);
+            border-radius: 32px;
+            padding: 40px 28px;
+            margin-bottom: 30px;
+            box-shadow: 0 12px 28px -8px rgba(27, 75, 90, 0.25);
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .hero h1 {
+            font-size: 2.1rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            margin-bottom: 8px;
+            background: rgba(255,255,255,0.06);
+            display: inline-block;
+            padding: 4px 18px 4px 0;
+        }
+
+        .hero .sub {
+            font-size: 1.1rem;
+            opacity: 0.88;
+            max-width: 680px;
+            background: rgba(255,255,255,0.08);
+            padding: 8px 16px;
+            border-radius: 40px;
+            backdrop-filter: blur(2px);
+        }
+
+        /* 蓝绿点缀网格卡片 */
+        .card-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 18px;
+            margin-bottom: 34px;
+        }
+
+        @media (min-width: 560px) {
+            .card-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+            }
+        }
+
+        @media (min-width: 840px) {
+            .card-grid {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+
+        .info-card {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 24px 20px 22px;
+            box-shadow: 0 4px 14px rgba(0, 30, 40, 0.05);
+            transition: transform 0.15s ease, box-shadow 0.2s;
+            border-left: 5px solid #2a9d8f;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .info-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px -8px rgba(42, 157, 143, 0.18);
+        }
+
+        .info-card .card-icon {
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+            color: #2a9d8f;
+        }
+
+        .info-card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: #17494d;
+        }
+
+        .info-card p {
+            font-size: 0.97rem;
+            color: #2b3e4e;
+            margin-bottom: 6px;
+            flex: 1;
+        }
+
+        .info-card .badge-tag {
+            display: inline-block;
+            background: #e1f0ee;
+            color: #1b6b63;
+            font-size: 0.75rem;
+            padding: 2px 12px;
+            border-radius: 40px;
+            font-weight: 500;
+            margin-top: 8px;
+            align-self: flex-start;
+        }
+
+        /* 适合人群 + 混合内容 */
+        .section-block {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 28px 24px;
+            margin-bottom: 28px;
+            box-shadow: 0 4px 12px rgba(0, 30, 40, 0.03);
+            border: 1px solid #dce8ea;
+        }
+
+        .section-block h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #17494d;
+            border-bottom: 3px solid #2a9d8f;
+            display: inline-block;
+            padding-bottom: 6px;
+            margin-bottom: 20px;
+        }
+
+        .persona-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px 20px;
+            margin-top: 10px;
+        }
+
+        .persona-item {
+            background: #edf6f5;
+            padding: 10px 18px;
+            border-radius: 60px;
+            font-size: 0.98rem;
+            color: #154e4a;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: 1px solid #c2dfda;
+        }
+
+        .persona-item span {
+            font-weight: 500;
+            background: #2a9d8f;
+            color: white;
+            width: 26px;
+            height: 26px;
+            border-radius: 30px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+        }
+
+        .link-sentence {
+            background: #f7fcfb;
+            padding: 18px 22px;
+            border-radius: 20px;
+            margin: 26px 0 10px;
+            border-left: 5px solid #2a9d8f;
+            font-size: 1.04rem;
+        }
+
+        .link-sentence a {
+            color: #1a6f6a;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 2px solid #b4d9d2;
+            transition: border-color 0.15s;
+        }
+
+        .link-sentence a:hover {
+            border-bottom-color: #1a6f6a;
+        }
+
+        .faq-mini {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .faq-item {
+            border-bottom: 1px dashed #cbdad9;
+            padding-bottom: 12px;
+        }
+
+        .faq-item strong {
+            color: #1b5a58;
+            display: block;
+            margin-bottom: 3px;
+            font-weight: 600;
+        }
+
+        .faq-item p {
+            color: #2d4448;
+            font-size: 0.95rem;
+        }
+
+        .footnote {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #4f6b72;
+            border-top: 1px solid #d4e2e0;
+            padding-top: 26px;
+            margin-top: 10px;
+            letter-spacing: 0.3px;
+        }
+
+        .footnote a {
+            color: #1e7a70;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .btn-outline {
+            display: inline-block;
+            border: 1.5px solid #2a9d8f;
+            color: #1e6b63;
+            padding: 6px 22px;
+            border-radius: 60px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            background: transparent;
+            transition: 0.15s;
+            text-decoration: none;
+            margin: 6px 0;
+        }
+
+        .btn-outline:hover {
+            background: #2a9d8f;
+            color: white;
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .hero {
+                padding: 30px 20px;
+            }
+            .section-block {
+                padding: 20px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page-wrap">
+
+    <!-- hero 主视觉 -->
+    <div class="hero">
+        <h1>500彩票网官方</h1>
+        <div class="sub">信息汇聚 · 稳定入口 · 使用说明</div>
+        <div style="margin-top: 8px; font-size:0.92rem; opacity:0.75; background: rgba(255,255,240,0.12); padding: 4px 14px; border-radius: 30px;">
+            📌 从用户视角理解平台功能与边界
+        </div>
+    </div>
+
+    <!-- 用途卡片网格 (蓝绿色点缀) -->
+    <div class="card-grid">
+        <div class="info-card">
+            <div class="card-icon">📋</div>
+            <h3>信息查询</h3>
+            <p>了解官方渠道提供的基本资讯、公告及常见问题指引，帮助用户快速定位所需内容。</p>
+            <span class="badge-tag">说明型</span>
+        </div>
+        <div class="info-card">
+            <div class="card-icon">🧭</div>
+            <h3>稳定访问入口</h3>
+            <p>通过持续维护的域名入口获取最新页面结构，降低因网络波动导致的中断风险。</p>
+            <span class="badge-tag">入口参考</span>
+        </div>
+        <div class="info-card">
+            <div class="card-icon">📎</div>
+            <h3>规则与提示</h3>
+            <p>汇总平台相关的条款摘要、责任说明及安全提醒，帮助用户合理认知服务边界。</p>
+            <span class="badge-tag">认知辅助</span>
+        </div>
+        <div class="info-card">
+            <div class="card-icon">🔍</div>
+            <h3>功能区分</h3>
+            <p>区分不同板块的定位：新闻、数据、社区内容等，减少操作中的困惑。</p>
+            <span class="badge-tag">导航参考</span>
+        </div>
+    </div>
+
+    <!-- 适合人群 + 自然链接段落 -->
+    <div class="section-block">
+        <h2>适合人群</h2>
+        <div class="persona-grid">
+            <div class="persona-item"><span>●</span> 信息浏览者</div>
+            <div class="persona-item"><span>●</span> 平台新访客</div>
+            <div class="persona-item"><span>●</span> 规则查阅者</div>
+            <div class="persona-item"><span>●</span> 稳定入口需求者</div>
+        </div>
+
+        <!-- 自然嵌入链接的句子，严格使用 "500彩票网官方" 作为可见文本 -->
+        <div class="link-sentence">
+            📎 对于希望保持信息渠道连贯的用户，可参考 <a href="https://china-official-500.com">500彩票网官方</a> 所提供的基础页面结构，作为了解模块划分的起点。
+        </div>
+
+        <p style="margin-top: 12px; font-size:0.98rem; color:#2a4a4e;">
+            此外，针对平台内的板块分类与通知入口，也可以结合自身需求进行对照。页面内容以客观说明为主，不构成任何操作建议。
+        </p>
+    </div>
+
+    <!-- 场景 · 提示 · FAQ摘要混合 -->
+    <div class="section-block">
+        <h2>常见场景与提示摘要</h2>
+        <div class="faq-mini">
+
+            <div class="faq-item">
+                <strong>📌 如何定位稳定入口？</strong>
+                <p>建议使用主流浏览器，并通过已知的域名地址直接访问。若遇到访问延迟，可稍后重试或检查网络环境。</p>
+            </div>
+            <div class="faq-item">
+                <strong>📌 页面信息是否实时更新？</strong>
+                <p>官方页面内容随平台调整而变化，本介绍页仅反映当前可观察到的基础功能分区，具体以实际页面为准。</p>
+            </div>
+            <div class="faq-item">
+                <strong>📌 是否提供下载或客户端？</strong>
+                <p>请通过官方页面内指引了解。任何第三方客户端均不属于本介绍范围，注意信息安全。</p>
+            </div>
+        </div>
+
+        <!-- 第二个自然链接，嵌入在句子里，依然严格显示 "500彩票网官方" -->
+        <p style="margin-top: 18px; background: #eaf3f1; padding: 12px 18px; border-radius: 40px; font-size:0.95rem;">
+            💡 若需要进一步查看公告或服务说明，可以直接访问 <a href="https://china-official-500.com">500彩票网官方</a> 首页，那里集中展示了分类入口。
+        </p>
+    </div>
+
+    <!-- 附加说明 / 知识型承接段落 -->
+    <div class="section-block" style="border-left: 5px solid #2a9d8f;">
+        <h2 style="border-bottom-color: #6abfaa;">页面定位说明</h2>
+        <p style="margin-bottom: 8px;">
+            此介绍页从信息稳定性与模块认知角度出发，归纳了与平台相关的基本用途、适用人群以及注意事项。不包含任何诱导性表述，也不对平台服务进行延伸解读。
+        </p>
+        <p>
+            网站结构可能随运营需要调整，建议定期通过上述链接了解最新版块划分。保持对官方入口的关注，有助于减少信息噪音。
+        </p>
+        <div style="margin-top: 18px; display: flex; flex-wrap: wrap; gap: 8px;">
+            <span style="background:#e6f2ef; padding:4px 14px; border-radius:30px; font-size:0.85rem; color:#1b635e;">📁 模块参考</span>
+            <span style="background:#e6f2ef; padding:4px 14px; border-radius:30px; font-size:0.85rem; color:#1b635e;">🧾 客观说明</span>
+        </div>
+    </div>
+
+    <!-- footer 微提示 -->
+    <div class="footnote">
+        <span>信息卡片式介绍 · 基于公开可认知内容</span><br>
+        <span style="opacity:0.6;">页面仅供学习参考 · 如有变动以实际网站为准</span>
+    </div>
+
+</div>
+</body>
+</html>
